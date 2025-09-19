@@ -2,7 +2,7 @@
   "name": "sufian-portfolio",
   "version": "1.0.0",
   "private": true,
-  "type": "module", // <-- fixes Vite warning about module type
+  "type": "module",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
