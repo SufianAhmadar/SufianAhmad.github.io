@@ -19,66 +19,208 @@
         </div>
     </nav>
 
-    <!-- Hero / Intro -->
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 md:px-20">
-        <h1 class="text-4xl md:text-6xl font-bold">Hey there, I’m Sufian Ahmad</h1>
-        <p class="mt-4 text-lg md:text-2xl text-gray-300 px-4 md:px-0 max-w-2xl">
-            Game Marketing Developer • Playable Ads & Video Creatives • Unity, Spine, 3D & Motion Design
-        </p>
-    </section>
-
-    <!-- Recent Projects -->
-    <section id="work" class="py-20 px-6 md:px-20">
-        <h2 class="text-3xl font-bold mb-10 text-center">Recent Work</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-            <a href="moodgames/index.html" class="group">
-                <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:bg-gray-800 transition">
-                    <h3 class="text-2xl font-semibold group-hover:text-red-500">Mood Games</h3>
-                    <p class="mt-2 text-gray-400">Playable Ads / Hypercasual</p>
-                </div>
-            </a>
-
-            <a href="sablo/index.html" class="group">
-                <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:bg-gray-800 transition">
-                    <h3 class="text-2xl font-semibold group-hover:text-red-500">Sablo Studio</h3>
-                    <p class="mt-2 text-gray-400">Creative Strategy & Motion</p>
-                </div>
-            </a>
-
-            <a href="artisticgamers/index.html" class="group">
-                <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:bg-gray-800 transition">
-                    <h3 class="text-2xl font-semibold group-hover:text-red-500">Artistic Gamers</h3>
-                    <p class="mt-2 text-gray-400">Unity & Animation</p>
-                </div>
-            </a>
-
-            <a href="tapnation/index.html" class="group">
-                <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:bg-gray-800 transition">
-                    <h3 class="text-2xl font-semibold group-hover:text-red-500">TapNation</h3>
-                    <p class="mt-2 text-gray-400">Playable Ads & UA Optimization</p>
-                </div>
-            </a>
-
+    <!-- Banner / Intro -->
+    <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 md:px-20">
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-20">
+            <source src="assets/banner.mp4" type="video/mp4">
+        </video>
+        <div class="relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold">Hey there, I’m Sufian Ahmad</h1>
+            <p class="mt-4 text-lg md:text-2xl text-gray-300 px-4 md:px-0 max-w-2xl">
+                Game Marketing Developer • Playable Ads & Video Creatives • Unity, Spine, 3D & Motion Design
+            </p>
         </div>
     </section>
+    <section id="work" class="py-16 px-6 md:px-20 bg-gray-900">
+        <h2 class="text-4xl font-bold mb-10 text-center">🚀 Recent Work</h2>
 
-    <!-- Contact CTA -->
-    <section class="py-20 px-6 md:px-20 text-center">
-        <p class="text-gray-400">Looking to collaborate or have a project in mind?</p>
-        <a href="contact.html" class="mt-6 inline-block px-8 py-3 bg-red-500 rounded-lg hover:bg-red-600">Let’s Talk</a>
-    </section>
+        <!-- Creative Videos -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-semibold mb-6 text-center">🎥 Creative Videos</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto">
+                <!-- Video 1 -->
+                <div class="bg-gray-800 p-4 rounded-xl shadow-lg hover:bg-gray-700 transition">
+                    <video class="rounded-lg w-full" controls>
+                        <source src="assets/creative1.mp4" type="video/mp4">
+                        Your browser does not support video.
+                    </video>
+                    <h4 class="text-lg font-semibold mt-4">UA Creative #1</h4>
+                    <p class="text-gray-400">Playable ad for XYZ game</p>
+                </div>
 
-    <!-- Games -->
-    <section id="games" style="text-align:center; margin: 50px 0;">
-        <h2 style="font-size: 2rem; margin-bottom: 20px;">🎮 My Games</h2>
-        <div id="games-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-            <!-- Games will be injected here by JS -->
+                <!-- Video 2 -->
+                <div class="bg-gray-800 p-4 rounded-xl shadow-lg hover:bg-gray-700 transition">
+                    <video class="rounded-lg w-full" controls>
+                        <source src="assets/creative2.mp4" type="video/mp4">
+                        Your browser does not support video.
+                    </video>
+                    <h4 class="text-lg font-semibold mt-4">UA Creative #2</h4>
+                    <p class="text-gray-400">Concept test video</p>
+                </div>
+                <!-- Video 3 -->
+                <div class="bg-gray-800 p-4 rounded-xl shadow-lg hover:bg-gray-700 transition">
+                    <video class="rounded-lg w-full" controls>
+                        <source src="assets/creative3.mp4" type="video/mp4">
+                        Your browser does not support video.
+                    </video>
+                    <h4 class="text-lg font-semibold mt-4">UA Creative #2</h4>
+                    <p class="text-gray-400">Concept test video</p>
+                </div> <!-- Video 4 -->
+                <div class="bg-gray-800 p-4 rounded-xl shadow-lg hover:bg-gray-700 transition">
+                    <video class="rounded-lg w-full" controls>
+                        <source src="assets/creative4.mp4" type="video/mp4">
+                        Your browser does not support video.
+                    </video>
+                    <h4 class="text-lg font-semibold mt-4">UA Creative #2</h4>
+                    <p class="text-gray-400">Concept test video</p>
+                </div>
+            </div>
         </div>
-    </section>
 
-    <!-- Add this at the bottom, just before </body> -->
-    <script src="games.js"></script>
+        <!-- Games Section -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-semibold mb-6 text-center">🎮 Games</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto">
+                <a href="https://play.google.com/store/apps/details?id=YOURGAME1" target="_blank" class="group">
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:bg-gray-700 transition flex flex-col items-center">
+                        <img src="assets/game1-icon.png" alt="Game 1" class="w-24 h-24 rounded-lg shadow-lg mb-4">
+                        <h4 class="text-lg font-semibold group-hover:text-red-500">Game Title 1</h4>
+                        <p class="text-gray-400">Hypercasual | 1M+ downloads</p>
+                    </div>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=YOURGAME2" target="_blank" class="group">
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:bg-gray-700 transition flex flex-col items-center">
+                        <img src="assets/game2-icon.png" alt="Game 2" class="w-24 h-24 rounded-lg shadow-lg mb-4">
+                        <h4 class="text-lg font-semibold group-hover:text-red-500">Game Title 2</h4>
+                        <p class="text-gray-400">Simulation | Featured on Play Store</p>
+                    </div>
+                </a>
+            </div>
+        </div>
 
+        <!-- Playable Ads Section -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-semibold mb-6 text-center">🕹️ Playable Ads</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center">
+
+                <!-- Playable 1 -->
+                <div class="relative bg-gray-900 p-4 rounded-xl shadow-lg">
+                    <!-- Thumbnail or Preview -->
+                    <img src="assets/playable1-preview.png" alt="Playable Preview" class="rounded-xl w-full">
+
+                    <!-- Play Button -->
+                    <button onclick="openPlayable('playables/playable1/index.html')"
+                            class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 hover:bg-opacity-70 transition rounded-xl">
+                        <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M6 4l12 6-12 6V4z" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Skill Section -->
+
+        <section class="py-20 px-6 md:px-20 text-center bg-gray-900">
+            <h2 class="text-3xl font-bold mb-10">Skills & Tools</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center">
+                    <img src="assets/unity-icon.png" class="w-16 h-16 mb-4" alt="Unity">
+                    <p>Unity 3D</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="assets/csharp-icon.png" class="w-16 h-16 mb-4" alt="Programming">
+                    <p>C#</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="assets/github-icon.png" class="w-16 h-16 mb-4" alt="Git">
+                    <p>Git</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="assets/cpp-icon.png" class="w-16 h-16 mb-4" alt="Programming">
+                    <p>C#</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="assets/spine-icon.png" class="w-16 h-16 mb-4" alt="Spine">
+                    <p>Spine 2D</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="assets/photoshop-icon.png" class="w-16 h-16 mb-4" alt="Photoshop">
+                    <p>Photoshop</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="assets/blender-icon.png" class="w-16 h-16 mb-4" alt="Blender">
+                    <p>Blender</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="assets/unityplayworks-icon.png" class="w-16 h-16 mb-4" alt="Playable">
+                    <p>Unity Playable</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Projects -->
+        <section id="work" class="py-20 px-6 md:px-20">
+            <h2 class="text-3xl font-bold mb-10 text-center">Recent Work</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <a href="moodgames/index.html" class="group">
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:bg-gray-800 transition">
+                        <h3 class="text-2xl font-semibold group-hover:text-red-500">Mood Games</h3>
+                        <p class="mt-2 text-gray-400">Playable Ads / Hypercasual</p>
+                    </div>
+                </a>
+
+                <a href="sablo/index.html" class="group">
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:bg-gray-800 transition">
+                        <h3 class="text-2xl font-semibold group-hover:text-red-500">Sablo Studio</h3>
+                        <p class="mt-2 text-gray-400">Creative Strategy & Motion</p>
+                    </div>
+                </a>
+
+                <a href="artisticgamers/index.html" class="group">
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:bg-gray-800 transition">
+                        <h3 class="text-2xl font-semibold group-hover:text-red-500">Artistic Gamers</h3>
+                        <p class="mt-2 text-gray-400">Unity & Animation</p>
+                    </div>
+                </a>
+
+                <a href="tapnation/index.html" class="group">
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:bg-gray-800 transition">
+                        <h3 class="text-2xl font-semibold group-hover:text-red-500">TapNation</h3>
+                        <p class="mt-2 text-gray-400">Playable Ads & UA Optimization</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="py-20 px-6 md:px-20 text-center">
+            <p class="text-gray-400">Looking to collaborate or have a project in mind?</p>
+            <a href="contact.html" class="mt-6 inline-block px-8 py-3 bg-red-500 rounded-lg hover:bg-red-600">Let’s Talk</a>
+        </section>
+
+        <!-- Games -->
+        <section id="games" style="text-align:center; margin: 50px 0;">
+            <h2 style="font-size: 2rem; margin-bottom: 20px;">🎮 My Games</h2>
+            <div id="games-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                <!-- Games will be injected here by JS -->
+            </div>
+        </section>
+
+        <!-- Add this at the bottom, just before </body> -->
+        <script src="games.js"></script>
+
+
+
+        <!-- Playables -->
+        <script>
+            function openPlayable(url) {
+                // Open in a new tab or a modal
+                modal.open(url, "_blank");
+            }
+        </script>
 </body>
 </html>

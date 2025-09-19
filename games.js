@@ -19,18 +19,17 @@ const games = [
 
 // 🔧 Dynamically Render Games
 const container = document.getElementById("games-container");
-
 games.forEach(game => {
-    const gameEl = document.createElement("a");
-    gameEl.href = game.link;
-    gameEl.target = "_blank";
-    gameEl.style.textDecoration = "none";
+    const a = document.createElement("a");
+    a.href = game.link;
+    a.target = "_blank";
+    a.className = "flex flex-col items-center w-[120px] text-white hover:text-red-400 transition";
 
-    gameEl.innerHTML = `
+    a.innerHTML = `
     <img src="${game.icon}" alt="${game.title}" 
-         style="width:120px; height:120px; border-radius:20px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
-    <p style="margin-top:8px; font-weight:bold; color:#333;">${game.title}</p>
+         class="rounded-xl shadow-md hover:scale-110 transition-transform duration-200 w-[120px] h-[120px]">
+    <p class="mt-2 font-semibold">${game.title}</p>
   `;
 
-    container.appendChild(gameEl);
+    container.appendChild(a);
 });
