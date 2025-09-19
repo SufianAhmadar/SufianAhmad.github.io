@@ -1,65 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | Game Marketing</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-black text-white font-sans">
-
-    <!-- Top / Hero Section -->
-    <section class="h-screen flex flex-col justify-center items-center text-center px-6">
-        <h1 class="text-4xl md:text-6xl font-bold">Sufian Ahmad</h1>
-        <p class="mt-4 text-lg md:text-2xl text-gray-300">Game Marketing Developer | Playable Ads & Video Creatives</p>
-        <div class="mt-6 flex space-x-4">
-            <a href="#work" class="px-6 py-2 bg-red-500 rounded-lg hover:bg-red-600">View My Work</a>
-            <a href="mailto:your@email.com" class="px-6 py-2 bg-gray-800 rounded-lg hover:bg-gray-700">Contact Me</a>
-        </div>
-    </section>
-
-    <!-- Mid / Work Showcase -->
-    <section id="work" class="py-20 px-6 md:px-20">
-        <h2 class="text-3xl font-bold mb-10 text-center">My Projects</h2>
-        <div class="grid md:grid-cols-3 gap-10">
-
-            <!-- Example Project -->
-            <div class="bg-gray-900 p-4 rounded-xl shadow-lg">
-                <div class="phone-mockup border-4 border-gray-700 rounded-2xl overflow-hidden">
-                    <video autoplay muted loop playsinline class="w-full">
-                        <source src="assets/Screen_Recording_20240609_224330_Heroes v Hordes.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <h3 class="mt-4 text-xl font-semibold">Casual Game Playable Ad</h3>
-                <p class="text-gray-400 text-sm mt-2">
-                    Reduced CPI by 22% with interactive ad design.
-                    Built in Unity + optimized for 5MB size.
-                </p>
-            </div>
-
-            <!-- Duplicate more projects here -->
-            <div class="bg-gray-900 p-4 rounded-xl shadow-lg">
-                <div class="phone-mockup border-4 border-gray-700 rounded-2xl overflow-hidden">
-                    <video autoplay muted loop playsinline class="w-full">
-                        <source src="assets/playable2.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <h3 class="mt-4 text-xl font-semibold">Hypercasual Ad Variation</h3>
-                <p class="text-gray-400 text-sm mt-2">A/B tested variations, boosted CTR by 15%.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- End / Contact -->
-    <section class="py-20 text-center bg-gray-950">
-        <h2 class="text-3xl font-bold">Let s Work Together</h2>
-        <p class="mt-4 text-gray-400">Need playable ads, trailers, or marketing creatives?</p>
-        <div class="mt-6">
-            <a href="mailto:your@email.com"
-               class="px-6 py-3 bg-red-500 rounded-lg hover:bg-red-600 text-lg">Contact Me</a>
-        </div>
-    </section>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sufian Portfolio</title>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
