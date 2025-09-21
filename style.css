@@ -10,3 +10,10 @@
 .grid {
     justify-content: center;
 }
+#playableFrame {
+  aspect-ratio: 9/16;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  background: black;
+}
