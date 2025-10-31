@@ -23,9 +23,14 @@
         <img src="assets/favicon.png" alt="Logo" class="w-8 h-8 rounded-full">
     </nav>
     <!-- Spacing between sections -->
-    <div class="py-8"></div>
+    <!--<div class="py-8"></div>-->
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline
+           class="absolute inset-0 w-full h-full object-cover opacity-40 z-0">
+        <source src="assets/banner.mp4" type="video/mp4">
+    </video>
     <section class="flex flex-col justify-center items-center">
-<!--        <h1 class="text-4xl md:text-6xl font-bold">Let's Work Together</h1>-->
+        <!--        <h1 class="text-4xl md:text-6xl font-bold">Let's Work Together</h1>-->
 
         <section id="contact" class="contact-section">
             <h2 class="section-title">Our Contacts</h2>
@@ -39,7 +44,6 @@
             <!--            <input type="email" placeholder="your email" required />-->
             <!--        </div>-->
             <!--        <textarea placeholder="your message" rows="6" required></textarea>-->
-
             <!--        <button type="submit" class="submit-btn">submit</button>-->
             <!--    </form>-->
             <form action="https://formspree.io/f/xvgpkrwr" method="POST" class="contact-form">
@@ -60,24 +64,108 @@
                 </button>
             </form>
 
-<!--            <p class="contact-email">-->
-<!--                <a href="mailto:sufian.ahmad00@gmail.com">-->
-<!--                    sufian.ahmad00@gmail.com-->
-<!--                </a>-->
-<!--            </p>-->
+            <p class="contact-email">
+                <!--<a href="mailto:sufian.ahmad00@gmail.com">
+                    sufian.ahmad00@gmail.com
+                </a>-->
+            </p>
+            <a href="index.html" class="mt-10 text-gray-400 hover:underline">&larr; Back to Home</a>
+
         </section>
+        <div class="skills-container flex flex-wrap justify-center gap-3 mb-8">
+            <a href="mailto:sufian.ahmad00@gmail.com" class="skill-tag hover:text-red-500 flex items-center gap-2">📩 Gmail</a>
 
+            <!--<a href="https://wa.me/923224121817" target="_blank" class="hover:text-green-400 flex items-center gap-2">💬 WhatsApp</a>-->
+            <a href="https://www.linkedin.com/in/sufian-ahmad-🙌-0b38ab1a8/" target="_blank" class="skill-tag hover:text-blue-400 flex items-center gap-2">🔗 LinkedIn</a>
+            <!--<a href="tel:+923224121817" class="hover:text-yellow-300 flex items-center gap-2">📞 Phone</a>-->
+            <a href="https://github.com/SufianAhmadar" target="_blank" class="skill-tag hover:text-red-500 flex items-center gap-2">🐈‍⬛ GitHub</a>
+            <a href="https://www.youtube.com/@artanddev6634" target="_blank" class="skill-tag hover:text-red-500 flex items-center gap-2">▶️ YouTube</a>
+            <a href="https://www.instagram.com/artistic_gameworld/-0b38ab1a8/" target="_blank" class="skill-tag hover:text-pink-400 flex items-center gap-2">📸 Instagram</a>
+        </div>
 
-        <p class="mt-4 text-gray-400">You can also reach via:</p>
+        <!--<p class="mt-4 text-gray-400">You can also reach via:</p>
         <div class="mt-6 space-y-4">
             <a href="mailto:sufian.ahmad00@gmail.com" class="block text-lg text-red-500 hover:underline">📩 sufian.ahmad00@gmail.com</a>
             <a href="https://www.linkedin.com/in/sufian-ahmad-🙌-0b38ab1a8/" target="_blank" class="block text-lg text-red-500 hover:underline">🚀 LinkedIn Profile</a>
             <a href="https://www.instagram.com/artistic_gameworld/-0b38ab1a8/" target="_blank" class="block text-lg text-red-500 hover:underline">🎨 Instragram</a>
             <a href="https://www.youtube.com/@artanddev6634" target="_blank" class="block text-lg text-red-500 hover:underline">🎥 YouTube</a>
             <a href="https://github.com/SufianAhmadar" target="_blank" class="block text-lg text-red-500 hover:underline">🐈‍⬛ Git</a>
-        </div>
-        <a href="index.html" class="mt-10 text-gray-400 hover:underline">&larr; Back to Home</a>
+        </div>-->
+
+
     </section>
+
+    <!-- Call-to-Action -->
+    <!--<div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="#work" class="btn-primary px-6 py-3 rounded-2xl text-lg font-semibold">
+            🚀 View My Work
+        </a>
+        <a href="contact.html" class="btn-secondary px-6 py-3 rounded-2xl text-lg font-semibold">
+            📬 Get in Touch
+        </a>
+    </div>-->
+    <!-- Spacing between sections -->
+    <div class="py-2"></div>
+
+    <!-- Floating Social Links (Top Right) -->
+    <!-- Floating Dropdown Social Bar -->
+    <div class="fixed top-6 right-6 z-50">
+        <div class="relative">
+            <!-- Main Button -->
+            <button id="socialToggle"
+                    class="text-white text-2xl rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-gray-700 transition">
+                🔗
+            </button>
+
+            <!-- Dropdown Content -->
+            <div id="socialMenu"
+                 class="hidden absolute right-0 mt-3 bg-gray-800 text-white rounded-xl shadow-xl p-3 flex flex-col gap-3 w-44">
+                <a href="mailto:sufian.ahmad00@gmail.com" class="hover:text-red-500 flex items-center gap-2">📩 Gmail</a>
+
+                <!--<a href="https://wa.me/923224121817" target="_blank" class="hover:text-green-400 flex items-center gap-2">💬 WhatsApp</a>-->
+                <a href="https://www.linkedin.com/in/sufian-ahmad-🙌-0b38ab1a8/" target="_blank" class="hover:text-blue-400 flex items-center gap-2">🔗 LinkedIn</a>
+                <!--<a href="tel:+923224121817" class="hover:text-yellow-300 flex items-center gap-2">📞 Phone</a>-->
+                <a href="https://github.com/SufianAhmadar" target="_blank" class="hover:text-red-500 flex items-center gap-2">🐈‍⬛ GitHub</a>
+                <a href="https://www.youtube.com/@artanddev6634" target="_blank" class="hover:text-red-500 flex items-center gap-2">▶️ YouTube</a>
+                <a href="https://www.instagram.com/artistic_gameworld/-0b38ab1a8/" target="_blank" class="hover:text-pink-400 flex items-center gap-2">📸 Instagram</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        const toggle = document.getElementById('socialToggle');
+        const menu = document.getElementById('socialMenu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Optional: close menu if clicked outside
+        document.addEventListener('click', (e) => {
+            if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between; /* space-between | center | flex-start */
+            align-items: flex-start; /* align vertically */
+            gap: 20px; /* space between sections */
+        }
+
+        .section {
+            flex: 1; /* make them equal width */
+            padding: 20px;
+            background: #222;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
 
 </body>
 </html>
