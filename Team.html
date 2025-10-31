@@ -7,7 +7,49 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="contact.css">
 </head>
+
+<section id="contact" class="contact-section">
+    <h2 class="section-title">Our Contacts</h2>
+    <p class="section-subtitle">
+        Leave us a message and we will contact you shortly
+    </p>
+
+<!--    <form class="contact-form" onsubmit="return false;">-->
+<!--        <div class="input-row">-->
+<!--            <input type="text" placeholder="your name" required />-->
+<!--            <input type="email" placeholder="your email" required />-->
+<!--        </div>-->
+<!--        <textarea placeholder="your message" rows="6" required></textarea>-->
+
+<!--        <button type="submit" class="submit-btn">submit</button>-->
+<!--    </form>-->
+    <form action="https://formspree.io/f/xvgpkrwr" method="POST" class="contact-form">
+        <div class="input-row">
+            <label>
+                <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 rounded border border-gray-300 text-black" />
+            </label>
+            <label>
+                <input type="email" name="_replyto" placeholder="Your Email" required class="w-full p-2 rounded border border-gray-300 text-black" />
+            </label>
+        </div>
+        <label>
+            <textarea placeholder=" your message" rows="6" required></textarea>
+        </label>
+
+        <button type="submit" class="submit-btn">
+             Submit
+        </button>
+    </form>
+
+    <p class="contact-email">
+        <a href="mailto:sufian.ahmad00@gmail.com">
+            sufian.ahmad00@gmail.com
+        </a>
+    </p>
+</section>
+
 
 
 <body class="bg-black text-white font-sans text-center">
