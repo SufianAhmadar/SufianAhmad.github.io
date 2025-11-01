@@ -126,7 +126,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <!-- Video -->
                     <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                        <video controls class="absolute top-0 left-0 w-full h-full object-cover">
+                        <video muted playsinline preload="auto" controls class="absolute top-0 left-0 w-full h-full object-cover">
                             <source src="videos/HAD 2.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -156,7 +156,7 @@
 
                     <!-- Video (right on desktop) -->
                     <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg order-1 md:order-2">
-                        <video controls class="absolute top-0 left-0 w-full h-full object-cover">
+                        <video muted playsinline preload="auto" controls class="absolute top-0 left-0 w-full h-full object-cover">
                             <source src="videos/Best Performers.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -167,7 +167,7 @@
                 <div class="grid md:grid-cols-2 gap-10 items-center mb-12">
                     <!-- Video -->
                     <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                        <video controls class="absolute top-0 left-0 w-full h-full object-cover">
+                        <video muted playsinline preload="auto" controls class="absolute top-0 left-0 w-full h-full object-cover">
                             <source src="videos/OtherGames.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -196,7 +196,7 @@
 
                     <!-- Video (right on desktop) -->
                     <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg order-1 md:order-2">
-                        <video controls class="absolute top-0 left-0 w-full h-full object-cover">
+                        <video muted playsinline preload="auto" controls class="absolute top-0 left-0 w-full h-full object-cover">
                             <source src="videos/RescueAgent.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -207,7 +207,7 @@
                 <div class="grid md:grid-cols-2 gap-10 items-center mb-12">
                     <!-- Video -->
                     <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                        <video controls class="absolute top-0 left-0 w-full h-full object-cover">
+                        <video muted playsinline preload="auto" controls class="absolute top-0 left-0 w-full h-full object-cover">
                             <source src="videos/UnblockJam.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -238,7 +238,7 @@
 
                     <!-- Video (right on desktop) -->
                     <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg order-1 md:order-2">
-                        <video controls class="absolute top-0 left-0 w-full h-full object-cover">
+                        <video muted playsinline preload="auto" controls class="absolute top-0 left-0 w-full h-full object-cover">
                             <source src="videos/Work Compilations 22-23.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -251,14 +251,14 @@
 
                     <!-- Video -->
                     <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                        <video controls class="absolute top-0 left-0 w-full h-full object-cover">
+                        <video muted playsinline preload="auto" controls class="absolute top-0 left-0 w-full h-full object-cover">
                             <source src="videos/PMR.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <!-- Video (right on desktop) -->
                     <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                        <video controls class="absolute top-0 left-0 w-full h-full object-cover">
+                        <video muted playsinline preload="auto" controls class="absolute top-0 left-0 w-full h-full object-cover">
                             <source src="videos/Seasonal + Trends.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -293,7 +293,7 @@
                 <div class="grid md:grid-cols-2 gap-10 items-center mb-12">
                     <!-- Video (right on desktop) -->
                     <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg md:order-2">
-                        <video controls class="absolute top-0 left-0 w-full h-full object-cover">
+                        <video muted playsinline preload="auto" controls class="absolute top-0 left-0 w-full h-full object-cover">
                             <source src="videos/OtherGames2.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -302,7 +302,7 @@
 
                     <!-- Video (right on desktop) -->
                     <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg md:order-2">
-                        <video controls class="absolute top-0 left-0 w-full h-full object-cover">
+                        <video muted playsinline preload="auto" controls class="absolute top-0 left-0 w-full h-full object-cover">
                             <source src="videos/HAD 1.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -326,6 +326,39 @@
                 </div>
             </section>
         </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const videos = document.querySelectorAll("#videos video");
+
+                videos.forEach(video => {
+                    // Ensure video loops
+                    video.loop = true;
+                    video.muted = true;
+                    video.playsInline = true;
+
+                    // Wait until the video can play
+                    video.addEventListener("canplaythrough", () => {
+                        video.play().catch(err => {
+                            console.warn("Autoplay blocked:", err);
+                        });
+                    });
+                });
+            });
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    const video = entry.target;
+                    if (entry.isIntersecting) {
+                        video.play().catch(() => { });
+                    } else {
+                        video.pause();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            videos.forEach(video => observer.observe(video));
+
+        </script>
 
         <!-- Playable Ads Section -->
         <div id="playables" class="tab-content hidden">
