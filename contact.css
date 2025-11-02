@@ -58,6 +58,7 @@ textarea {
 }
 
 textarea {
+  color: white !important;
   resize: none;
 }
 
