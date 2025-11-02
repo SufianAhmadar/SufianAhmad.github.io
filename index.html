@@ -353,35 +353,35 @@
 
                 videos.forEach(video => observer.observe(video));
 
-                // 🔹 Optional: stop all videos when another tab (like Games or Playables) is opened
-                const creativesTab = document.querySelector("#creatives-tab");
-                const gamesTab = document.querySelector("#games-tab");
-                const playablesTab = document.querySelector("#playables-tab");
-                const videosSection = document.querySelector("#videos-section");
-
-                function stopAllVideos() {
-                    videos.forEach(v => v.pause());
-                }
-
-                // Example: when switching tabs, pause videos
-                [gamesTab, playablesTab].forEach(tab => {
-                    if (!tab) return;
-                    tab.addEventListener("click", () => {
-                        stopAllVideos();
-                    });
-                });
+                // // 🔹 Optional: stop all videos when another tab (like Games or Playables) is opened
+                // const creativesTab = document.querySelector("#creatives-tab");
+                // const gamesTab = document.querySelector("#games-tab");
+                // const playablesTab = document.querySelector("#playables-tab");
+                // const videosSection = document.querySelector("#videos-section");
+                //
+                // function stopAllVideos() {
+                //     videos.forEach(v => v.pause());
+                // }
+                //
+                // // Example: when switching tabs, pause videos
+                // [gamesTab, playablesTab].forEach(tab => {
+                //     if (!tab) return;
+                //     tab.addEventListener("click", () => {
+                //         stopAllVideos();
+                //     });
+                // });
 
                 // When going back to Creatives tab, resume visible ones
-                if (creativesTab) {
-                    creativesTab.addEventListener("click", () => {
-                        videos.forEach(v => {
-                            const rect = v.getBoundingClientRect();
-                            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-                                v.play().catch(() => {});
-                            }
-                        });
-                    });
-                }
+                // if (creativesTab) {
+                //     creativesTab.addEventListener("click", () => {
+                //         videos.forEach(v => {
+                //             const rect = v.getBoundingClientRect();
+                //             if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                //                 v.play().catch(() => {});
+                //             }
+                //         });
+                //     });
+                // }
             });
         </script>
 
