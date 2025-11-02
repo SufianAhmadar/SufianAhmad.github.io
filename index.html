@@ -332,12 +332,12 @@
                 const videos = document.querySelectorAll("#videos video");
                 const MAX_ACTIVE = 3; // Only keep 2 videos active at once
 
-                videos.forEach(video => {
-                    video.loop = true;
-                    video.muted = true;
-                    video.playsInline = true;
-                    video.pause();
-                });
+                //videos.forEach(video => {
+                //    video.loop = true;
+                //    video.muted = true;
+                //    video.playsInline = true;
+                //    video.pause();
+                //});
 
                 // Track which videos are active
                 const activeVideos = new Set();
@@ -345,6 +345,10 @@
                 const observer = new IntersectionObserver(entries => {
                     entries.forEach(entry => {
                         const video = entry.target;
+                        video.loop = true;
+                        video.muted = true;
+                        video.playsInline = true;
+                        video.pause();
 
                         if (entry.isIntersecting) {
                             // if already 2 videos playing, stop the furthest one
