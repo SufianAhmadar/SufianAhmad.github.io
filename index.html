@@ -330,58 +330,41 @@
         <script>
             document.addEventListener("DOMContentLoaded", () => {
                 const videos = document.querySelectorAll("#videos video");
+                const MAX_ACTIVE = 3; // Only keep 2 videos active at once
 
-                // Setup videos (muted autoplay)
                 videos.forEach(video => {
                     video.loop = true;
                     video.muted = true;
                     video.playsInline = true;
-                    video.pause(); // start paused
+                    video.pause();
                 });
 
-                // Observer for when video is visible on screen
+                // Track which videos are active
+                const activeVideos = new Set();
+
                 const observer = new IntersectionObserver(entries => {
                     entries.forEach(entry => {
                         const video = entry.target;
+
                         if (entry.isIntersecting) {
+                            // if already 2 videos playing, stop the furthest one
+                            if (activeVideos.size >= MAX_ACTIVE) {
+                                const [first] = activeVideos;
+                                first.pause();
+                                activeVideos.delete(first);
+                            }
+
                             video.play().catch(err => console.warn("Autoplay blocked:", err));
+                            activeVideos.add(video);
                         } else {
                             video.pause();
+                            activeVideos.delete(video);
                         }
                     });
-                }, { threshold: 0.5 });
+                }, { threshold: 0.6 }); // video must be 60% visible
 
+                // Observe all videos but only the visible ones will play
                 videos.forEach(video => observer.observe(video));
-
-                // // 🔹 Optional: stop all videos when another tab (like Games or Playables) is opened
-                // const creativesTab = document.querySelector("#creatives-tab");
-                // const gamesTab = document.querySelector("#games-tab");
-                // const playablesTab = document.querySelector("#playables-tab");
-                // const videosSection = document.querySelector("#videos-section");
-                //
-                // function stopAllVideos() {
-                //     videos.forEach(v => v.pause());
-                // }
-                //
-                // // Example: when switching tabs, pause videos
-                // [gamesTab, playablesTab].forEach(tab => {
-                //     if (!tab) return;
-                //     tab.addEventListener("click", () => {
-                //         stopAllVideos();
-                //     });
-                // });
-
-                // When going back to Creatives tab, resume visible ones
-                // if (creativesTab) {
-                //     creativesTab.addEventListener("click", () => {
-                //         videos.forEach(v => {
-                //             const rect = v.getBoundingClientRect();
-                //             if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-                //                 v.play().catch(() => {});
-                //             }
-                //         });
-                //     });
-                // }
             });
         </script>
 
